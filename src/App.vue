@@ -6,6 +6,8 @@ import AppCard from "./components/AppCard.vue";
 import AppClassifica from "./components/AppClassifica.vue";
 import AppSponsor from "./components/AppSponsor.vue";
 import AppFooter from "./components/AppFooter.vue";
+import AppCarosello from "./components/AppCarosello.vue";
+
 
 
 
@@ -20,7 +22,8 @@ export default {
     AppCard,
     AppClassifica,
     AppSponsor,
-    AppFooter
+    AppFooter,
+    AppCarosello
 },
   data() {
     return {
@@ -33,6 +36,7 @@ export default {
 
 <template>
   <AppHeader/>
+  <AppCarosello/>
   <AppMain/>
   <AppUpcoming/>
   <AppCard/>
