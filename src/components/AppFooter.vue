@@ -7,9 +7,15 @@
                 <li class="my-3"><h4> +1 (234) 567 89 10</h4></li>
                 <li class="my-3"><h4>example@example.com</h4></li>
                 <ul class="d-flex gap-4 my-4">
-                    <li>icona</li>
-                    <li>icona</li>
-                    <li>icona</li>
+            <li class="icona px-3 py-1">
+                <font-awesome-icon :icon="facebookIcon" />
+            </li>
+            <li class="icona px-3 py-1">
+                <font-awesome-icon :icon="instagramIcon" />
+            </li>
+            <li class="pe-4 icona px-3 py-1">
+                <font-awesome-icon :icon="twitterIcon" />
+            </li>
                 </ul>
             </ul>
         </div>
@@ -41,7 +47,7 @@
             <ul>
                 <li class="my-2">- FIXTURES & RESULTS</li>
                 <li>- LEAGUE TABLE</li>
-                <li class="my-2">- PLAYERS</li>
+                <li>- PLAYERS</li>
                 <li>- GALLERY</li>
             </ul>
         </div>
@@ -56,14 +62,21 @@
       
       <script>
       
-      import { store } from '../store'
-    
+      import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+      import { faFacebook } from '@fortawesome/free-brands-svg-icons'
+      import { faInstagram } from '@fortawesome/free-brands-svg-icons'
+      import { faTwitter } from '@fortawesome/free-brands-svg-icons'
       
       export default {
+        components: {
+        FontAwesomeIcon
+        },
         name: 'AppFooter',
         data() {
           return {
-            store
+            facebookIcon: faFacebook,
+            instagramIcon: faInstagram,
+            twitterIcon: faTwitter
           }
         }
       }
@@ -72,6 +85,9 @@
       <style lang="scss" scoped>
       img{
         width: 50px;
+      }
+      .icona{
+        border: 1px solid white;
       }
       </style>
       

@@ -1,7 +1,7 @@
 <template>
-    <header class="p-3 text-light">
-        <div>
-            <ul class="d-flex justify-content-center">
+  <header class="p-3 text-light ">
+    <div class="d-flex justify-content-center">
+            <ul class="d-flex justify-content-center gap-3 align-items-center">
              <li>
                 <img src="../assets/sponsor1.png" alt="">
                 </li>
@@ -14,72 +14,80 @@
              <li>
               </li>
              <li>
-                <a href="#"><img src="../../assets/sponsor1.png" alt="">logo</a>
-                </li>
+                <font-awesome-icon :icon="facebookIcon" />
+            </li>
+            <li>
+                <font-awesome-icon :icon="instagramIcon" />
+            </li>
+            <li class="pe-4">
+                <font-awesome-icon :icon="twitterIcon" />
+            </li>
             </ul>
         </div>
+    <div class="">
+      <ul class="d-flex justify-content-between gap-3 align-items-center ">
 
-        <div class="px-5 pt-2">
-            <ul class="d-flex justify-content-between">
-                 <li>
-                     <a href="#">HOME</a>
-                    </li>
-                 <li>
-                     <a href="#">FIXTURES & RESULTS</a>
-                    </li>
-                 <li>
-                     <a href="#">LEAGUE TABLE</a>
-                    </li>
-                 <li>
-                    <a href="#">PLAYERS</a>
-                    </li>
-                 <li>
-                    <a href="#">GALLERY</a>
-                    </li>
-                    <li>
-                    <a href="#">BLOG</a>
-                    </li>
-                    <li>
-                    <a href="#">CONTACT</a>
-                    </li>
-                    
-                </ul>
-
-        </div>
-
-        <section>
-            
-        </section>
-    </header>
+        <li  v-for="(menuItem, index) in menuItems" :key="index" class="text-white">
+          <a :href="menuItem.link">{{ menuItem.text }}</a>
+        </li>
+       
+      </ul>
+    </div>
+  </header>
 </template>
-  
-  <script>
-  
-  import { store } from '../store'
 
-  
-  export default {
-    name: 'AppHeader',
-    data() {
-      return {
-        store
-      }
+<script>
+import AppHeaderDinamico from './AppHeaderDinamico.vue'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faFacebook } from '@fortawesome/free-brands-svg-icons'
+import { faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+
+export default {
+  components: {
+    AppHeaderDinamico,
+    FontAwesomeIcon
+  },
+  data() {
+    return {
+      facebookIcon: faFacebook,
+      instagramIcon: faInstagram,
+      twitterIcon: faTwitter,
+      menuItems: [
+        { text: 'HOME', link: '#' },
+        { text: 'FIXTURES & RESULTS', link: '#' },
+        { text: 'LEAGUE TABLE', link: '#' },
+        { text: 'PLAYERS', link: '#' },
+        { text: 'GALLERY', link: '#' },
+        { text: 'BLOG', link: '#' },
+        { text: 'CONTACT', link: '#' }
+      ]
     }
   }
-  </script>
-  
-  <style lang="scss" scoped>
- header{
-    background-color: black;
-    opacity: 0.7;
-    li{
-        list-style-type: none;
-        a{
-            text-decoration: none;
-            color: white;
-        }
-    }
-    
- }
-  </style>
-  
+}
+</script>
+
+<style>
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; 
+  background-color: rgba(0, 0, 0, 0.2); 
+}
+
+
+header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header ul li {
+  display: inline-block;
+  color: white;
+}
+
+
+</style>

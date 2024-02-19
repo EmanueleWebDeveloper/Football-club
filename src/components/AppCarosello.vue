@@ -4,7 +4,6 @@
       <button class="arrow left" @click="prevSlide">&#10094;</button>
       <div class="slides">
         <div v-for="(slide, index) in slides" :key="index" :class="{ active: index === currentIndex }">
-          <!-- Contenuto del singolo slide -->
           <img :src="slide.image" :alt="slide.alt">
         </div>
       </div>
@@ -15,18 +14,15 @@
   
   <script>
   
-  import { store } from '../store'
-
-  
   export default {
     name: 'AppCarosello',
     data() {
         return {
       slides: [
-        { image: '', alt: 'Description 1' },
-        { image: '', alt: 'Description 2' },
-        { image: '', alt: 'Description 3' },
-        
+        { image: "src/assets/slider1-1.jpg", alt: 'Description 1' },
+        { image: 'src/assets/slider2-1.jpg', alt: 'Description 2' },
+        { image: 'src/assets/slider3.jpg', alt: 'Description 3' },
+        { image: "src/assets/slider4.jpg", alt: 'Description 4' },
       ],
       currentIndex: 0
     };
