@@ -13,26 +13,26 @@
                 </li>
              <li>
               </li>
-             <li>
-                <font-awesome-icon :icon="facebookIcon" />
+             <li class="icona">
+                <font-awesome-icon :icon="facebookIcon" class="fa-2x" />
             </li>
             <li>
-                <font-awesome-icon :icon="instagramIcon" />
+                <font-awesome-icon :icon="instagramIcon" class="fa-2x" />
             </li>
             <li class="pe-4">
-                <font-awesome-icon :icon="twitterIcon" />
+                <font-awesome-icon :icon="twitterIcon" class="fa-2x" />
             </li>
             </ul>
         </div>
-    <div class="">
-      <ul class="d-flex justify-content-between gap-3 align-items-center pt-4">
+    <nav class="responsive">
+      <ul class="d-flex justify-content-between align-items-center pt-4">
 
         <li   v-for="(menuItem, index) in menuItems" :key="index" >
-          <a class="text-white px-1 mx-4" :href="menuItem.link">{{ menuItem.text }}</a>
+          <a class="text-white px-1 mx-5" :href="menuItem.link">{{ menuItem.text }}</a>
         </li>
        
       </ul>
-    </div>
+    </nav>
   </header>
 </template>
 
@@ -91,6 +91,7 @@ header ul li {
 li a:hover {
   border-bottom: 2px solid white;
 }
+  
 
 
 </style>

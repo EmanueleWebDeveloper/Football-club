@@ -13,22 +13,23 @@
     <div class="carousel-item">
       <img src="../assets/slider2-1.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
+        <h5>La tua squadra Preferita</h5>
+        <p>Dove vuoi!</p>
       </div>
     </div>
     <div class="carousel-item">
       <img src="../assets/slider3.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
+        <h5>Isciviti Subito!</h5>
+        <p>Non perdere l'occasione di vincere meravigliosi premi.</p>
       </div>
     </div>
     <div class="carousel-item">
       <img src="../assets/slider4.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
+        <h5>Tickets</h5>
+        <p>Acquista qui il tuo biglietto</p>
+        <button type="button" class="btn btn-lg btn-outline-light">Compra Tickets</button>
       </div>
     </div>
   </div>

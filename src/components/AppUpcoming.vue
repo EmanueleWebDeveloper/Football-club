@@ -1,128 +1,68 @@
 <template>
-    <section>
-        
-        <div class="sfondo">
-            <h2 class="d-flex gap-3 justify-content-center text-white py-4">Upcoming Matchs</h2>
-            <div class="lex-column gap-3 justify-content-center text-uppercase fs-2  align-items-center text-white py-4">
-
-                <div class="d-flex gap-3 justify-content-center  px-5  colore ">
-
-                    <div class="d-flex align-items-center ">
-                        <h3>Schalke  </h3>
-                        <img src="../assets/club-1.png" alt="">
-                    </div>
-                    <h2 class="fs-1">VS</h2>
-                    <div class="d-flex align-items-center">
-                        <img src="../assets/club-2.png" alt="">
-                        <h3>Inter Club </h3>
-                    </div>   
-                </div>
-                <div class="d-flex gap-3 justify-content-center text-white coloredue ">
-                <h5>May 21,2022 18:05 pm</h5>  
-                <h5>Expert Stadium</h5>   
-                </div> 
-            </div>
-            <div class="lex-column gap-3 justify-content-center text-uppercase fs-2  align-items-center text-white py-4">
-
-<div class="d-flex gap-3 justify-content-center  px-5  colore ">
-
-    <div class="d-flex align-items-center ">
-        <h3>Schalke  </h3>
-        <img src="../assets/club-3.png" alt="">
-    </div>
-    <h2 class="fs-1">VS</h2>
-    <div class="d-flex align-items-center">
-        <img src="../assets/club-4.png" alt="">
-        <h3>Inter Club </h3>
-    </div>   
-</div>
-<div class="d-flex gap-3 justify-content-center text-white coloredue ">
-<h5>May 21,2022 18:05 pm</h5>  
-<h5>Expert Stadium</h5>   
-</div> 
-</div>
-
-<div class="lex-column gap-3 justify-content-center text-uppercase fs-2  align-items-center text-white py-4">
-
-<div class="d-flex gap-3 justify-content-center  px-5  colore ">
-
-    <div class="d-flex align-items-center ">
-        <h3>Schalke  </h3>
-        <img src="../assets/club-11.png" alt="">
-    </div>
-    <h2 class="fs-1">VS</h2>
-    <div class="d-flex align-items-center">
-        <img src="../assets/club-6.png" alt="">
-        <h3>Inter Club </h3>
-    </div>   
-</div>
-<div class="d-flex gap-3 justify-content-center text-white coloredue ">
-<h5>May 21,2022 18:05 pm</h5>  
-<h5>Expert Stadium</h5>   
-</div> 
-</div>
-
-<div class="lex-column gap-3 justify-content-center text-uppercase fs-2  align-items-center text-white py-4">
-
-<div class="d-flex gap-3 justify-content-center  px-5  colore">
-
-    <div class="d-flex align-items-center ">
-        <h3>Schalke  </h3>
-        <img src="../assets/club-7.png" alt="">
-    </div>
-    <h2 class="fs-1">VS</h2>
-    <div class="d-flex align-items-center">
-        <img src="../assets/club-8.png" alt="">
-        <h3>Inter Club </h3>
-    </div>   
-</div>
-<div class="d-flex gap-3 justify-content-center text-white coloredue ">
-<h5>May 21,2022 18:05 pm</h5>  
-<h5>Expert Stadium</h5>   
-</div> 
-</div>
-
-<div class="lex-column gap-3 justify-content-center text-uppercase fs-2  align-items-center text-white py-4">
-
-<div class="d-flex gap-3 justify-content-center  px-5  colore">
-
-    <div class="d-flex align-items-center ">
-        <h3>Schalke  </h3>
-        <img src="../assets/club-3.png" alt="">
-    </div>
-    <h2 class="fs-1">VS</h2>
-    <div class="d-flex align-items-center">
-        <img src="../assets/club-11.png" alt="">
-        <h3>Inter Club </h3>
-    </div>   
-</div>
-<div class="d-flex gap-3 justify-content-center text-white coloredue ">
-<h5>May 21,2022 18:05 pm</h5>  
-<h5>Expert Stadium</h5>   
-</div> 
-</div>
-
-        
-        </div>
-
-
-        
-    </section>
+     <div>
+    <AppUpcomingDinamico :matches="upcomingMatches" />
+  </div>
 
 </template>
   
   <script>
-  
+  import AppUpcomingDinamico from './AppUpcomingDinamico.vue';
   import { store } from '../store'
 
   
   export default {
+    components: {
+        AppUpcomingDinamico
+    },
     name: 'AppUpcoming',
     data() {
-      return {
-        store
-      }
-    }
+    return {
+    store,
+    upcomingMatches: [
+      {
+        homeTeam: 'Schalke',
+        awayTeam: 'Inter Club',
+        homeTeamLogo: 'src/assets/league-club-1.png',
+        awayTeamLogo: 'src/assets/league-club-2.png',
+        matchDate: 'May 18, 2022 18:05 pm',
+        stadium: 'Expert Stadium'
+      },
+      {
+          homeTeam: 'Schalke',
+          awayTeam: 'Madrid Club',
+          homeTeamLogo: 'src/assets/club-3.png',
+          awayTeamLogo: 'src/assets/club-4.png',
+          matchDate: 'Octubre 21, 2022 19:05 pm',
+          stadium: 'Expert Stadium'
+        },
+        {
+          homeTeam: 'United Fs Club',
+          awayTeam: 'Instanbul Club',
+          homeTeamLogo: 'src/assets/club-6.png',
+          awayTeamLogo: 'src/assets/club-7.png',
+          matchDate: 'August 01, 2022 16:05 pm',
+          stadium: 'Expert Stadium'
+        },
+        {
+          homeTeam: 'Arsenal Fs Club',
+          awayTeam: 'Bayer Fs Club	',
+          homeTeamLogo: 'src/assets/club-8.png',
+          awayTeamLogo: 'src/assets/club-9.png',
+          matchDate: 'september 21, 2022 12:05 pm',
+          stadium: 'Expert Stadium'
+        },
+        {
+          homeTeam: 'Palermo',
+          awayTeam: 'Catania Club',
+          homeTeamLogo: 'src/assets/club-11.png',
+          awayTeamLogo: 'src/assets/club-2.png',
+          matchDate: 'octubre 25, 2022 20:05 pm',
+          stadium: 'Expert Stadium'
+        },
+    
+        ]
+  };
+}
   }
   </script>
   
@@ -135,12 +75,12 @@
 
 
     .colore{
-        background-color: #1e3d6a;
+        background-color: rgba(30, 61, 106, 0.4);
         width: 80%;
         margin: 0 auto;
     }
     .coloredue{
-        background-color: #152948;
+        background-color: rgba(21, 41, 72, 0.7);
         width: 80%;
         margin: 0 auto;
     }

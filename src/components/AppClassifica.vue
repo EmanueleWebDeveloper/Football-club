@@ -30,7 +30,7 @@
       </div>
     </div>
 
-    <div class="col-6 mt-4 mb-5 me-5  ">
+    <div class="col-6 mt-4 mb-5 me-5 ">
       <div class="d-flex justify-content-center  align-items-center sfondodx">
         <div class="d-flex align-items-center">
           <h5>United Fs Club</h5>
