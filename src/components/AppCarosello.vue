@@ -1,15 +1,46 @@
 <template>
-     <div class="carousel">
-    <div class="carousel-container">
-      <button class="arrow left" @click="prevSlide">&#10094;</button>
-      <div class="slides">
-        <div v-for="(slide, index) in slides" :key="index" :class="{ active: index === currentIndex }">
-          <img :src="slide.image" :alt="slide.alt">
-        </div>
+<div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../assets/slider1-1.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+<h2>Football Club Sport Club</h2>        
+<p>Private football matches</p>
+<button type="button" class="btn btn-lg btn-outline-light">Learn More</button>
+
       </div>
-      <button class="arrow right" @click="nextSlide">&#10095;</button>
+    </div>
+    <div class="carousel-item">
+      <img src="../assets/slider2-1.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="../assets/slider3.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="../assets/slider4.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
     </div>
   </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 </template>
   
   <script>
@@ -18,73 +49,14 @@
     name: 'AppCarosello',
     data() {
         return {
-      slides: [
-        { image: "src/assets/slider1-1.jpg", alt: 'Description 1' },
-        { image: 'src/assets/slider2-1.jpg', alt: 'Description 2' },
-        { image: 'src/assets/slider3.jpg', alt: 'Description 3' },
-        { image: "src/assets/slider4.jpg", alt: 'Description 4' },
-      ],
-      currentIndex: 0
+  
     };
   },
-  methods: {
-    prevSlide() {
-      this.currentIndex = (this.currentIndex - 1 + this.slides.length) % this.slides.length;
-    },
-    nextSlide() {
-      this.currentIndex = (this.currentIndex + 1) % this.slides.length;
-    }
-  }
+  
 };
 </script>
   
   <style lang="scss" scoped>
-.carousel {
-  width: 100%;
-  margin: auto;
-}
 
-.carousel-container {
-  position: relative;
-}
-
-.slides {
-  display: flex;
-  overflow: hidden;
-}
-
-.slides div {
-  flex: 0 0 100%;
-  transition: transform 0.5s ease;
-}
-
-.arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.5);
-  border: none;
-  color: black;
-  font-size: 2em;
-  cursor: pointer;
-  padding: 10px;
-  z-index: 1;
-}
-
-.arrow.left {
-  left: 0;
-}
-
-.arrow.right {
-  right: 0;
-}
-
-.arrow:hover {
-  background: rgba(255, 255, 255, 0.8);
-}
-
-.active {
-  display: block;
-}
   </style>
   

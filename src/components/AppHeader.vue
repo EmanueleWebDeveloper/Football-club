@@ -25,10 +25,10 @@
             </ul>
         </div>
     <div class="">
-      <ul class="d-flex justify-content-between gap-3 align-items-center ">
+      <ul class="d-flex justify-content-between gap-3 align-items-center pt-4">
 
-        <li  v-for="(menuItem, index) in menuItems" :key="index" class="text-white">
-          <a :href="menuItem.link">{{ menuItem.text }}</a>
+        <li   v-for="(menuItem, index) in menuItems" :key="index" >
+          <a class="text-white px-1 mx-4" :href="menuItem.link">{{ menuItem.text }}</a>
         </li>
        
       </ul>
@@ -87,6 +87,9 @@ header ul {
 header ul li {
   display: inline-block;
   color: white;
+}
+li a:hover {
+  border-bottom: 2px solid white;
 }
 
 
