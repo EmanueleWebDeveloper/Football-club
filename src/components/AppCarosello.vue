@@ -1,34 +1,34 @@
 <template>
 <div id="carouselExampleCaptions" class="carousel slide">
+
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="../assets/slider1-1.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-<h2>Football Club Sport Club</h2>        
-<p>Private football matches</p>
-<button type="button" class="btn btn-lg btn-outline-light">Learn More</button>
-
+      <img src="../assets/slider1-1.jpg" class="d-block w-100" style="height: 700px;"  alt="...">
+      <div class="carousel-caption d-none d-md-block py-5">
+        <h2 style="font-size: 70px;">Football Club <br> Sport Club</h2>        
+        <p class="fs-3">Private football matches</p>
+        <button type="button" class="btn btn-lg btn-outline-light">Learn More</button>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="../assets/slider2-1.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>La tua squadra Preferita</h5>
-        <p>Dove vuoi!</p>
+      <img src="../assets/slider2-1.jpg" class="d-block w-100" style="height: 700px;" alt="...">
+      <div class="carousel-caption d-none d-md-block py-5">
+        <h5 style="font-size: 70px;">La tua squadra Preferita</h5>
+        <p class="fs-3">Dove vuoi!</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="../assets/slider3.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Isciviti Subito!</h5>
-        <p>Non perdere l'occasione di vincere meravigliosi premi.</p>
+      <img src="../assets/slider3.jpg" class="d-block w-100" style="height: 700px;" alt="...">
+      <div class="carousel-caption d-none d-md-block py-5">
+        <h5 style="font-size: 70px;">Isciviti Subito!</h5>
+        <p class="fs-3">Non perdere l'occasione di vincere meravigliosi premi.</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="../assets/slider4.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Tickets</h5>
-        <p>Acquista qui il tuo biglietto</p>
+      <img src="../assets/slider4.jpg" class="d-block w-100" style="height: 700px;" alt="...">
+      <div class="carousel-caption d-none d-md-block py-5">
+        <h5 style="font-size: 70px;">Tickets</h5>
+        <p class="fs-3">Acquista qui il tuo biglietto</p>
         <button type="button" class="btn btn-lg btn-outline-light">Compra Tickets</button>
       </div>
     </div>

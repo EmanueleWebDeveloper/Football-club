@@ -1,5 +1,5 @@
 <template>
-  <header class="p-3 text-light ">
+  <header :class="{ 'scrolled': scrolled }" class="p-3 text-light fixed-top">
     <div class="d-flex justify-content-center">
             <ul class="d-flex justify-content-center gap-3 align-items-center">
              <li>
@@ -50,6 +50,7 @@ export default {
   },
   data() {
     return {
+      scrolled: false,
       facebookIcon: faFacebook,
       instagramIcon: faInstagram,
       twitterIcon: faTwitter,
@@ -62,6 +63,18 @@ export default {
         { text: 'BLOG', link: '#' },
         { text: 'CONTACT', link: '#' }
       ]
+    }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      
+      this.scrolled = window.scrollY > 490; 
     }
   }
 }
@@ -91,7 +104,10 @@ header ul li {
 li a:hover {
   border-bottom: 2px solid white;
 }
-  
+header.scrolled {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+}
 
 
 </style>
